@@ -63,7 +63,7 @@ The plugin:
 ### Build Steps
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/theme-randomizer.git](https://github.com/ramonpiha/RiderThemeRandomizer.git)
+git clone https://github.com/ramonpiha/RiderThemeRandomizer.git
 cd theme-randomizer
 
 # Build the plugin
