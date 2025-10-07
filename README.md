@@ -11,17 +11,11 @@ A fun plugin that randomly changes your IDE theme at specified intervals or on d
 
 ## Installation
 
-### From Plugin Marketplace (Coming Soon)
-1. Open your JetBrains IDE (Rider, IntelliJ IDEA, etc.)
-2. Go to `Settings/Preferences` → `Plugins`
-3. Search for "Theme Randomizer"
-4. Click `Install` and restart your IDE
-
 ### Manual Installation
-1. Download the latest release from the [Releases](https://github.com/yourusername/theme-randomizer/releases) page
+1. Download the latest release from the [Releases](https://github.com/ramonpiha/RiderThemeRandomizer/releases) page
 2. Open your IDE and go to `Settings/Preferences` → `Plugins`
-3. Click the gear icon ⚙️ and select `Install Plugin from Disk...`
-4. Select the downloaded `.jar` file
+3. Click the three vertical dots icon and select `Install Plugin from Disk...`
+4. Select the downloaded `.zip` file
 5. Restart your IDE
 
 ## Usage
