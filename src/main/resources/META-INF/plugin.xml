@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>com.ramon.theme-randomizer</id>
+    <name>Theme Randomizer</name>
+    <vendor>Ramon</vendor>
+
+    <description><![CDATA[
+        Randomly changes the IDE theme at specified intervals or on demand.
+        Add some variety to your coding experience!
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <depends>com.intellij.modules.platform</depends>
+    <idea-version since-build="252" until-build="253.*" />
+
+    <actions>
+        <action id="com.ramon.themerandomizer.RandomizeTheme"
+                class="com.ramon.themerandomizer.RandomizeThemeAction"
+                text="Randomize Theme"
+                description="Apply a random theme">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt T"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                id="com.ramon.themerandomizer.settings"
+                displayName="Theme Randomizer"
+                instance="com.ramon.themerandomizer.ThemeRandomizerConfigurable"/>
+    </extensions>
+</idea-plugin>
