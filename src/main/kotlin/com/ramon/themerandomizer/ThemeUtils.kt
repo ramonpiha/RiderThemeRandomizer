@@ -7,10 +7,9 @@ import com.intellij.openapi.editor.colors.EditorColorsManager
 import kotlin.random.Random
 
 object ThemeUtils {
-
     fun randomizeTheme() {
         val lafManager = LafManager.getInstance()
-        val themes: List<UIThemeLookAndFeelInfo> = lafManager.installedThemes.toList()
+        val themes: List<UIThemeLookAndFeelInfo> = getValidThemes(lafManager)
 
         if (themes.isNotEmpty()) {
             val randomTheme = themes[Random.nextInt(themes.size)]
@@ -37,6 +36,18 @@ object ThemeUtils {
             if (scheme != null) {
                 editorColorsManager.setGlobalScheme(scheme)
             }
+        }
+    }
+
+    private fun getValidThemes(lafManager: LafManager): List<UIThemeLookAndFeelInfo> {
+        val settings = ThemeRandomizerSettings.getInstance()
+        val allThemes = lafManager.installedThemes.toList()
+
+        return when {
+            settings.darkThemes && settings.lightThemes -> allThemes
+            settings.darkThemes -> allThemes.filter { it.isDark }
+            settings.lightThemes -> allThemes.filter { !it.isDark }
+            else -> emptyList()
         }
     }
 }

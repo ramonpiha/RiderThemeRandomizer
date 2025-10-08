@@ -15,7 +15,9 @@ class ThemeRandomizerSettings : PersistentStateComponent<ThemeRandomizerSettings
 
     data class State(
         var autoRandomize: Boolean = false,
-        var intervalMinutes: Int = 30
+        var darkThemes: Boolean = true,
+        var lightThemes: Boolean = true,
+        var intervalMinutes: Int = 30,
     )
 
     private var state = State()
@@ -34,6 +36,14 @@ class ThemeRandomizerSettings : PersistentStateComponent<ThemeRandomizerSettings
     var autoRandomize: Boolean
         get() = state.autoRandomize
         set(value) { state.autoRandomize = value }
+
+    var darkThemes: Boolean
+        get() = state.darkThemes
+        set(value) { state.darkThemes = value }
+
+    var lightThemes: Boolean
+        get() = state.lightThemes
+        set(value) { state.lightThemes = value }
 
     var intervalMinutes: Int
         get() = state.intervalMinutes
