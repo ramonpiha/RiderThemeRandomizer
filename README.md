@@ -6,6 +6,7 @@ A fun plugin that randomly changes your IDE theme at specified intervals or on d
 
 - 🎨 **Manual Theme Randomization** - Change your theme instantly with a keyboard shortcut or menu action
 - ⏰ **Automatic Theme Switching** - Set an interval (in minutes) to automatically randomize themes
+- 🌗 **Light/Dark Theme Control** – Choose whether to include light themes, dark themes, or both in the rotation.
 - 🎯 **Smart Theme Matching** - Automatically applies matching editor color schemes with UI themes
 - ⚙️ **Customizable Settings** - Enable/disable auto-randomization and set your preferred interval
 
